@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>My Book Library</h1>
+            <input type="text" id="search" placeholder="Search books...">
+        </header>
+        <main>
+            <div id="categories">
+                <button class="category" data-category="all">All</button>
+                <button class="category" data-category="available">Available</button>
+                <button class="category" data-category="borrowed">Borrowed</button>
+            </div>
+            <div id="book-list"></div>
+            <div id="add-book-form">
+                <h2>Add a Book</h2>
+                <form id="form">
+                    <input type="text" id="title" placeholder="Title" required>
+                    <input type="text" id="author" placeholder="Author" required>
+                    <input type="text" id="genre" placeholder="Genre" required>
+                    <input type="text" id="ISBN" placeholder="ISBN" required>
+                    <button type="submit">Add Book</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Book Library</p>
+        </footer>
+    </div>
+
+    
+    <div id="borrow-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Borrow Book</h2>
+            <form id="borrow-form">
+                <input type="text" id="borrower" placeholder="Borrower's Name" required>
+                <input type="date" id="return-date" required>
+                <button type="submit">Borrow</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

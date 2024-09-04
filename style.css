@@ -1,0 +1,233 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("./Background.jpg");
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: transparent;
+    border-radius: 10px 10px 0 0;
+}
+
+    header h1 {
+        margin: 0;
+        color: #fff;
+        font-size: 24px;
+    }
+
+#search {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: transparent;
+    color: white;
+}
+
+    #search:focus {
+        border: 1.8px solid white;
+    }
+
+#categories {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.category {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    color: white;
+}
+
+input:focus ,
+input:valid {
+    color: black;
+}
+
+::placeholder { 
+    color: white;
+  }
+    .category:hover {
+        background-color: white;
+        color: black;
+    }
+
+
+    .category.active {
+        background-color: white;
+        color: black;
+        border-color: white;
+    }
+
+#book-list {
+    margin-top: 20px;
+}
+
+.book {
+    padding: 15px;
+    position: relative;
+    transition: background-color 0.3s;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+    
+
+
+    .book h3 {
+        margin: 0 0 5px;
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .book p {
+        margin: 5px 0;
+        color: #fff;
+    }
+
+.borrow-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 15px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .borrow-button:hover {
+        background-color: #66a6ff;
+        color: white;
+    }
+
+    .borrow-button:disabled {
+        background-color: white;
+        color: black;
+        cursor: not-allowed;
+    }
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #e0e0e0;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 0 0 10px 10px;
+}
+
+#add-book-form {
+    margin-top: 20px;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+    #add-book-form h2 {
+        margin-bottom: 10px;
+        color: white;
+        font-size: 20px;
+    }
+
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+    #form input, #form button {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        outline: none;
+        transition: border-color 0.3s;
+        background-color: transparent;
+        color: white;
+    }
+
+        #form input:focus {
+            border: 1.8px solid white;
+        }
+
+    #form button {
+        background-color: #66a6ff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        #form button:hover {
+            background-color: #66a6ff;
+        }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+    .close:hover, .close:focus {
+        color: black;
+        text-decoration: none;
+    }
